@@ -1,13 +1,102 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="fansite.css">
-      <title>Your Fansite Name here</title>
+      <meta charset="utf-8">
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400"> 
+      <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">         
+      <link rel="stylesheet" href="css/bootstrap.min.css">                               
+      <link rel="stylesheet" href="css/tooplate-style.css">     
+      <title>Jenny From The Block</title>
     </head>
+
+
     <body>
-      <div id="welcome">Have fun making your Fansite!</div>
+      <div class="container-fluid">
+        <div class="tm-body">
+            <div class="tm-sidebar sticky">
+                <section id="welcome" class="tm-content-box tm-banner margin-b-15">
+                    <div class="tm-banner-inner">
+                      <img src="img/JLO_logo.png" width="100" height="51" alt=""/>
+                        <p class="tm-banner-subtitle">All Things Jennifer Lopez</p>                   
+                    </div>                    
+                </section>
+                <nav class="tm-main-nav">
+                    <ul class="tm-main-nav-ul">
+                        <li class="tm-nav-item"><a href="fansite.html" class="tm-nav-item-link tm-button active">Posts</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="articles.html" class="tm-nav-item-link tm-button">Articles</a>
+                        </li>
+                        <li class="tm-nav-item"><a href="subscribe.html" class="tm-nav-item-link tm-button">Subscribe</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="tm-main-content tm-gallery-container">                    
+              <div class="grid">                                                    
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7BAB8RpSNe/"><img src="img/gallery-img-23-01.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7WShnspwHg/"><img src="img/gallery-img-11-01.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7MFuJiJisx/"><img src="img/gallery-img-12-01.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7UXp8PpWnd/"><img src="img/gallery-img-11-02.jpg" alt="Image"></a></div>                        
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7MFuJiJisx/"><img src="img/gallery-img-12-02.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B6_3yuLJOrF/"><img src="img/gallery-img-23-02.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7TKMxhJVjT/"><img src="img/gallery-img-11-03.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B6_tII5JgRl/"><img src="img/gallery-img-23-03.jpg" alt="Image"></a></div>                        
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7Px8qApEls/"><img src="img/gallery-img-11-04.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7Op46qpwkN/"><img src="img/gallery-img-11-05.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7MFuJiJisx/"><img src="img/gallery-img-12-03.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7JduZ_Jyc8/"><img src="img/gallery-img-12-04.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7NhTJBJ0DG/"><img src="img/gallery-img-11-06.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B6_izrUpJNF/"><img src="img/gallery-img-23-04.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B7MFuJiJisx/"><img src="img/gallery-img-11-07.jpg" alt="Image"></a></div>
+                  <div class="grid-item"><a href="https://www.instagram.com/p/B6-ERZxJylN/"><img src="img/gallery-img-23-05.jpg" alt="Image"></a></div>
+              </div>                    
+          </div> <!-- tm-main-content -->
+        </div>
+
+            <footer class="tm-footer text-right">
+              <p>Copyright &copy; <span class="tm-current-year">2020</span> NKLGraphics</p>
+          </footer> 
+
+             <!-- load JS files -->
+        
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/imagesloaded.pkgd.min.js"></script> <!-- https://masonry.desandro.com/ -->
+        <script src="js/masonry.pkgd.min.js"></script> <!-- https://masonry.desandro.com/ -->
+        
+        <!-- Templatemo scripts -->
+        <script>  
+    
+        $(document).ready(function(){
+
+            // init Masonry
+            // https://codepen.io/craigwheeler/pen/MYjBga
+            var $grid = $('.grid').masonry({
+                
+                // set itemSelector so .grid-sizer is not used in layout
+                // itemSelector: '.grid-item',
+                // use element for option
+                // columnWidth: '.grid-sizer',
+                // percentPosition: true
+
+                itemSelector: '.grid-item',
+                isFitWidth: true,
+                columnWidth: 1
+            });
+            // layout Masonry after each image loads
+            $grid.imagesLoaded().progress( function() {
+              $grid.masonry('layout');
+            });            
+
+            // Update the current year in copyright
+            $('.tm-current-year').text(new Date().getFullYear());        
+        });
+
+        </script>
     </body>
   </html>
+  
